@@ -22,8 +22,18 @@ public class EstudianteService implements EstudianteRepository {
 	@Override
 	public List<Estudiante> findAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return estudianteRepository.findAll();
 	}
+	
+	
+	//creamos el metodo manualmente  para obtener la lista de estudiantes
+//	public List<Estudiante> obtenerTodos() {
+//		// TODO Auto-generated method stub
+//		return estudianteRepository.findAll();
+//	}
+	
+	
+	
 
 	@Override
 	public List<Estudiante> findAll(Sort sort) {
@@ -70,8 +80,15 @@ public class EstudianteService implements EstudianteRepository {
 	@Override
 	public Estudiante getOne(Long id) {
 		// TODO Auto-generated method stub
-		return null;
+		return estudianteRepository.getOne(id);
 	}
+	
+	
+	//creamos el metodo manualmente para obtener un estudiante
+//	public Estudiante obtenerEstudiante(Long id) {
+//		return estudianteRepository.getOne(id);
+//	}
+	
 
 	@Override
 	public <S extends Estudiante> List<S> findAll(Example<S> example) {
@@ -107,6 +124,13 @@ public class EstudianteService implements EstudianteRepository {
 	}
 	
 	
+	//creamos el metodo para actualizar o modificar
+	public void actualizarModificar(Estudiante estudiante) {
+		estudianteRepository.save(estudiante);
+	}
+	
+	
+	
 	
 	
 	
@@ -115,9 +139,15 @@ public class EstudianteService implements EstudianteRepository {
 	@Override
 	public Optional<Estudiante> findById(Long id) {
 		// TODO Auto-generated method stub
-		return null;
+		return estudianteRepository.findById(id);
 	}
+	
+//  creamos el metodo manualmente para obtener el estudiante	
+//	public List<Estudiante> findById(Long id) {
+//	return estudianteRepository.findById(id);
+//	}
 
+	
 	@Override
 	public boolean existsById(Long id) {
 		// TODO Auto-generated method stub
@@ -133,13 +163,22 @@ public class EstudianteService implements EstudianteRepository {
 	@Override
 	public void deleteById(Long id) {
 		// TODO Auto-generated method stub
-
+		estudianteRepository.deleteById(id);
 	}
+	
+	//creamos el metodo de eliminar manualmente 
+//	public void eliminar(Long id) {
+//		// TODO Auto-generated method stub
+//		estudianteRepository.deleteById(id);
+//	}
+	
+	
+	
 
 	@Override
 	public void delete(Estudiante entity) {
 		// TODO Auto-generated method stub
-
+     
 	}
 
 	@Override
